@@ -7,4 +7,3 @@ means=Trial_data_QMEE_assignment_Jan_22%>%
   group_by(Protein)%>%
   dplyr::summarise(Mean=mean(A750))
 print(means)
-     
