@@ -13,6 +13,7 @@ means=Trial_data_QMEE_assignment_Jan_22%>%
   group_by(protein_concentration)%>%
   dplyr::summarise(Mean=mean(A750))
 
+##updates to the Jan22 assignment for class. From this line down the code should run
 
 library(tidyverse)
 
