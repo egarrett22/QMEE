@@ -14,6 +14,15 @@ means=Trial_data_QMEE_assignment_Jan_22%>%
   dplyr::summarise(Mean=mean(A750))
 print(means)
 
-attach("Jan22data.csv")
+##just me playing around trying to get familiar with the name function and pulling out variables from a dataframe. Sorry if its messy, i can do this in another file it it muddles things up too much
+Jan22data$Protein
+Jan22data$A750
+names(Jan22data)
 
-Jan22data.csv$Protein
+x<-Jan22data$Protein
+y<-Jan22data$A750
+cor.test(x,y)
+
+plot(x,y, main = "ProteinQuantificationCurve", xlab="ProteinConcentrationmg/mL", ylab="AbsorbanceAt750nm")
+
+abline(lm(y~x, data=Jan22data), col="blue")
