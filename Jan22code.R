@@ -19,6 +19,7 @@ Jan22data$Protein
 Jan22data$A750
 names(Jan22data)
 
+##do I have to assignment columns as variables as i did below for the subsequent functions to work? i tried to run the functions off just the column names and i got a ton of error messages but when i assigned the column to variables x and y the code ran fine.
 x<-Jan22data$Protein
 y<-Jan22data$A750
 cor.test(x,y)
