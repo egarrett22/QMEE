@@ -19,7 +19,7 @@ ggplot(data = Feb4data, aes(x=Condition, y=Change, colour=Condition)) +
   geom_point() +
   xlab("Condition") +
   ylab("% Change") +
-  ggtitle("% Change in heart rate")
+  ggtitle("% Change in heart rate") 
 
 Feb4data%>%group_by(Condition)
 
