@@ -33,16 +33,27 @@ I was wondering what the best way would be to get the intercept as well as the r
 
 
 Assignment 3: Data visualization 
-Because I still do not have data from my masters project (due to Covid delays) I will be using more data that I used during my undergrad. This data set comes from an experiment in my human physiology class where we investigated the dive response. The dive response in short is the bodys response to submerssion in water. Here we recorded % changes in heart rate when an individuals head was submerged in water for a length of time. There were 6 conditions: 
-1)Breathing normally in air
+The assignment code file is Feb4script.R
+  would you prefer that this Feb4script.R be incorporated into the QMEE_code.R master assignment file that BMB created following the last assignment?
+
+Because I still do not have data from my masters project (due to Covid delays) I will be using more data that I collected during my undergrad. This data set comes from an experiment in my human physiology class where we investigated the dive response. The dive response is the body's response to submersion in water. Important factors to consider are temperature effects and apnea effects.  Here we recorded % changes in heart rate when an individuals head was submerged in water for a length of time. There were 6 conditions: 
+
+1. Breathing normally in air
 2. apnea in cold water
 3. apnea in air 
 4. breathing in air with snorkel 
 5. breathing in water with snorkel
 6. apnea in water
 
-What are we trying to show? We are trying to show the % change in heart rate between the 6 breathing conditions. generally, apnea decreased heart rate with apnea in cold water showing the largest decrease. There is however a HUGE variability in the data which is also something that should be noted 
-Choice ive made
-  the ggplot scatter plot was just to see if the group_by condition would work on a scatter plot 
-  the bar graph is a good way of showing the generalized trends in mean % change in heart rates across the breathing conditions 
-  the boxplot i believe follows what were were told in class about visulaizing "medium" amounts of data, there arent too many points as to overfill the box plot, but not too few to make a scatter plot 
+The snorkel: we used snorkels to investigate if the dive response was temperature dependent, apnea dependent or a combination of both. To do this, we had individuals use a snorkel and submerge their faces in water to allow for breathing, this would give us an idea of how temperature affected heart rate, they then breathed in air with the snorkel as a control to see if the snorkel changed heart rate. 
+
+What are we trying to show? We are trying to show the % change in heart rate between the 6 breathing conditions. generally, apnea decreased heart rate with apnea in cold water showing the largest decrease. There is however a HUGE variability in the data which is also something that should be noted.
+
+Choices I've made
+  the ggplot scatter plot was just to see if the group_by condition would work on a scatter plot, this is not a graph you would want to report in a paper. However i do find visualizing the data points like this give you some initial sense of data range/variability before continuing with more in depth analysis, i believe this would fall under a diagnostic type plot where we are looking for general trends in the data. 
+  
+  the bar graph is a good way of showing the generalized trends in mean % change in heart rates across the breathing conditions. It would be even better if standard deviation error bars were added but I couldnt figure out how to make that work. I believe this, along with the new plot, the box plot, follow the cleveland hierarchy where data are compared along a "common scale", the Y axis. 
+  
+  the boxplot i believe follows what were were told in class about visulaizing "medium" amounts of data, there arent too many pointsas to overfill the box plot(not thousands, but more than 100) , but not too few to make a scatter plot 
+  
+A question: One thing I would have liked to of had on these plots but could not figure out how to print or add was a legend of what each condition number meant. Do either of you have nay guidance on this issue? 
