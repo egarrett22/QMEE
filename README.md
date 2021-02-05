@@ -30,3 +30,19 @@ In terms of replicable components, in any given experiment series i have had to 
 I was wondering what the best way would be to get the intercept as well as the regression line equation?
 
 **BMB: I'm not sure what you mean here. If you want the coefficients (including the intercept and slope, save the model and use `coef(fitted_model)`**
+
+
+Assignment 3: Data visualization 
+Because I still do not have data from my masters project (due to Covid delays) I will be using more data that I used during my undergrad. This data set comes from an experiment in my human physiology class where we investigated the dive response. The dive response in short is the bodys response to submerssion in water. Here we recorded % changes in heart rate when an individuals head was submerged in water for a length of time. There were 6 conditions: 
+1)Breathing normally in air
+2. apnea in cold water
+3. apnea in air 
+4. breathing in air with snorkel 
+5. breathing in water with snorkel
+6. apnea in water
+
+What are we trying to show? We are trying to show the % change in heart rate between the 6 breathing conditions. generally, apnea decreased heart rate with apnea in cold water showing the largest decrease. There is however a HUGE variability in the data which is also something that should be noted 
+Choice ive made
+  the ggplot scatter plot was just to see if the group_by condition would work on a scatter plot 
+  the bar graph is a good way of showing the generalized trends in mean % change in heart rates across the breathing conditions 
+  the boxplot i believe follows what were were told in class about visulaizing "medium" amounts of data, there arent too many points as to overfill the box plot, but not too few to make a scatter plot 
