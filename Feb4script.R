@@ -3,20 +3,35 @@ library(readr)
 
 read_csv("Feb4data.csv")
 
-Feb4data%>%group_by(Condition)%>% 
-  summarise(`% change`=mean(`% change`))
+Feb4data <- read_csv("Feb4data.csv") 
+  
 
-Feb4data%>%group_by(Condition)%>%
-  summarise(`% change`=sd(`% change`))
+MeansFeb4<- Feb4data%>%group_by(Condition)%>% 
+  summarise(Change=mean(Change))
+
+SDFeb4<-Feb4data%>%group_by(Condition)%>%
+  summarise(Change=sd(Change))
 
 x<-Feb4data$Condition
-y<-Feb4data$`% change`
+y<-Feb4data$Change
 
 plot.default(Feb4data)
 
+Feb4data%>%group_by(Condition)
+
 library(ggplot2)
 
-##when i run the boxplot like we did it class, i am getting these errors and have no idea how to resolve them
-box1<-(ggplot(Feb4data, aes(x=Condition,y=% change,
-                            colour=Condition
-       + geom_boxplot(outlier.colour=NULL))
+Bar1<-ggplot(data = MeansFeb4, aes(x= as.factor(Condition), y=Change)) + 
+     geom_bar(stat="identity") +
+  xlab("Condition") + 
+  ylab("% Change")
+
+print(Bar1)
+
+
+box1 <- ggplot(data = Feb4data, aes(x=as.factor(Condition), y=Change), fill = as.factor(Condition)) + 
+  geom_boxplot() + 
+  xlab("Condition") +
+  ylab("% Change")
+
+print(box1)
