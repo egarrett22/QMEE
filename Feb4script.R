@@ -15,21 +15,24 @@ SDFeb4<-Feb4data%>%group_by(Condition)%>%
 x<-Feb4data$Condition
 y<-Feb4data$Change
 
-plot.default(Feb4data)
+ggplot(data = Feb4data, aes(x=Condition, y=Change, colour=Condition)) + 
+  geom_point() +
+  xlab("Condition") +
+  ylab("% Change")
 
 Feb4data%>%group_by(Condition)
 
 library(ggplot2)
 
-Bar1<-ggplot(data = MeansFeb4, aes(x= as.factor(Condition), y=Change)) + 
+Bar1<-ggplot(data = MeansFeb4, aes(x= as.factor(Condition), y=Change, fill=Condition)) + 
      geom_bar(stat="identity") +
   xlab("Condition") + 
   ylab("% Change")
 
 print(Bar1)
 
-
-box1 <- ggplot(data = Feb4data, aes(x=as.factor(Condition), y=Change), fill = as.factor(Condition)) + 
+##i cant get the colour filling to work on this one... any ideas?
+box1 <- ggplot(data = Feb4data, aes(x=as.factor(Condition), y=Change), fill = (Condition)) + 
   geom_boxplot() + 
   xlab("Condition") +
   ylab("% Change")
