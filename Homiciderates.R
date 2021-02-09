@@ -92,3 +92,53 @@ p2 <- (ggplot(mdat,
        + labs(y="Homicides per 100,000 population")
 )
 print(p2)
+
+
+##Thursday Feb 4th class examples 
+
+##dealing with NA in data()
+
+library(tidyverse)
+library(janitor)
+dd <- tibble(x=c(LETTERS[1:5],NA, rep("",2)),
+            y=c(1:5, rep(NA,3)),
+            z=rep(NA,8))
+
+print(dd)
+
+##how to change blank cells into NA
+##is it better to have blank cells or NA cells
+dd %>% mutate_if(is.character,
+                 ~replace(., which(!nzchar(.)),NA))
+##above is a depricated version and will dissapear in a few years so you have to learn how to do it in a different way 
+dd%>%mutate(across(is.character,
+                   ~replace(.,which(!nzchar(.)),NA)))
+##BAD
+dd[-(6:7), -3]
+dd[1:5,1:2]
+
+##good
+##janitor package, to remove the NAs
+remove_empty(dd,c("rows", "cols"))
+
+##the importance of clean/sensible data coding standards 
+
+##these are site tag/date
+"
+N6/919
+P22/1020
+A1/10511
+"
+##use the separate() function to separate these numbers by site tag and date 
+
+##multivariate and univariate views of data 
+##summary()
+##library(skimr)
+##skim(dataframe here)
+
+library(MASS)
+m<-mvrnorm(50, mu=c(0,0), Sigma=matrix(c(2,1.9,1.9,2),2))
+plot(m[,1],m[,2])
+m<-rbind(m,c(-2,2))
+plot(m[,1],m[,2])
+
