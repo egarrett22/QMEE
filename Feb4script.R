@@ -1,7 +1,9 @@
 library(tidyverse)
 library(readr)
 
-read_csv("Feb4data.csv")
+## JD: Did you think about choosing a theme?
+
+## read_csv("Feb4data.csv") ## This is practice code and can be commented out for submission
 
 Feb4data <- read_csv("Feb4data.csv") 
   
@@ -23,7 +25,7 @@ ggplot(data = Feb4data, aes(x=Condition, y=Change, colour=Condition)) +
 
 Feb4data%>%group_by(Condition)
 
-library(ggplot2)
+## library(ggplot2) left over
 
 Bar1<-ggplot(data = MeansFeb4, aes(x= as.factor(Condition), y=Change, fill=Condition)) + 
      geom_bar(stat="identity") +
@@ -34,7 +36,8 @@ Bar1<-ggplot(data = MeansFeb4, aes(x= as.factor(Condition), y=Change, fill=Condi
 print(Bar1)
 
 ##i cant get the colour filling to work on this one... any ideas?
-box1 <- ggplot(data = Feb4data, aes(x=as.factor(Condition), y=Change), fill = (Condition)) + 
+## JD: It was not inside the aesthetic mapping
+box1 <- ggplot(data = Feb4data, aes(x=as.factor(Condition), y=Change, fill = Condition)) + 
   geom_boxplot() + 
   xlab("Condition") +
   ylab("% Change") +
@@ -42,3 +45,4 @@ box1 <- ggplot(data = Feb4data, aes(x=as.factor(Condition), y=Change), fill = (C
 
 print(box1)
 
+## Grade 2.0/3

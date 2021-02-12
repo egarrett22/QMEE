@@ -45,6 +45,8 @@ Because I still do not have data from my masters project (due to Covid delays) I
 5. breathing in water with snorkel
 6. apnea in water
 
+JD: I would say good datavis should clarify the _structure_ of these conditions. Although I have to say it looks hard. 1 and 3 share something in common, and three of the conditions have apnea. But the rest is a bit mysterious. What is the comparotor for apnea in cold water, for example?
+
 The snorkel: we used snorkels to investigate if the dive response was temperature dependent, apnea dependent or a combination of both. To do this, we had individuals use a snorkel and submerge their faces in water to allow for breathing, this would give us an idea of how temperature affected heart rate, they then breathed in air with the snorkel as a control to see if the snorkel changed heart rate. 
 
 What are we trying to show? We are trying to show the % change in heart rate between the 6 breathing conditions. generally, apnea decreased heart rate with apnea in cold water showing the largest decrease. There is however a HUGE variability in the data which is also something that should be noted.
@@ -53,7 +55,13 @@ Choices I've made
   the ggplot scatter plot was just to see if the group_by condition would work on a scatter plot, this is not a graph you would want to report in a paper. However i do find visualizing the data points like this give you some initial sense of data range/variability before continuing with more in depth analysis, i believe this would fall under a diagnostic type plot where we are looking for general trends in the data. 
   
   the bar graph is a good way of showing the generalized trends in mean % change in heart rates across the breathing conditions. It would be even better if standard deviation error bars were added but I couldnt figure out how to make that work. I believe this, along with the new plot, the box plot, follow the cleveland hierarchy where data are compared along a "common scale", the Y axis. 
+
+JD: I did not like the bar plot; lots of ink and little information. I thought the points plot was better. You could also think about putting the points onto a boxplot.
   
   the boxplot i believe follows what were were told in class about visulaizing "medium" amounts of data, there arent too many pointsas to overfill the box plot(not thousands, but more than 100) , but not too few to make a scatter plot 
+
+JD: The color legends are wasted information. You might want them later if it's a better way to describe conditions, but I kind of think you won't.
   
 A question: One thing I would have liked to of had on these plots but could not figure out how to print or add was a legend of what each condition number meant. Do either of you have nay guidance on this issue? 
+
+JD: This relates to my question. It will be easier once I understand how the levels relate to each other. But a good start in general could be just to replace the conditions with good names. You can also think about trying BB's coord_flip trick to get conditions on the y axis and make it easier to associate readable text with them.
