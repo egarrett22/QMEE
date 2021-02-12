@@ -1,0 +1,9 @@
+QMEE assignment 
+February 11th 2021
+Emily Garrett
+Assignment question: Formulate a hypothesis about your data, and discuss how you would test it statistically.
+I will work off the dive response data I submitted in the last assignment: 
+The literature into the physiological background of the dive response suggests that the dive response is triggered by both temperature and apnea (changes in breathing). The dive response in this experiment was investigated by measuring changes in heart rate, this measurement can be used to infer trends generalized changes in heart contraction and blood circulation around the body. Therefore, we hypothesize that changes in temperature and breathing conditions (ie apnea or breathing), will lead to variation in heart rate measurements. We expect to observe variations in heart rate across the 6 treatment groups, specifically, we predict decreases in heart rate in conditions including cold temperature and/or apnea. 
+The first thing I would do, if I had any knowledge of how to know if a change in heart rate was biologically significant would be to set a threshold on what we are going to consider to be a significant change in heart rate. For the sake of this assignment, let’s say that a 10% change in heart rate would be biologically significant. Then, the first statistical test I would complete would be an ANOVA, to compare each treatment to the next to see if there are any statistically significantly differences. However, after Tuesday’s class on how misleading and unreliable P values are, I’m not so sure an ANOVA would be the best way of going about this. 
+
+
