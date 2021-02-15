@@ -3,9 +3,16 @@ February 11, 2021
 Emily Garrett
 
 Q1: You pick a person from this population at random, and test them, and the test is positive. What is the probability that they have MMV?
-The person chosen at random who has tested positive has a 95% chance of being infected by the MMV virus. With the information we have, there is no way to know if this person is part of the 5% false positive group or not. 
+The person chosen at random who has tested positive has a 95% chance of being infected by the MMV virus. With the information we have, there is no way to know if this person is part of the 5% false positive group or not.
+
+## BMB: We know the overall prevalence of the disease and we know the sensitivity (1-false negative) and specificity (1- false positive rate) of the test, so we *do* have more information than "this might be a false positive". (We will post solutions to this problem, but this verbal logic is wrong.)
+
 
 Q2: You learn that your friend has a positive rapid test for MMV. What do you tell them?
-I would tell my friend that there is a very good chance that they are infected with the MMV virus, however we cannot know that with a 100% certainty. Since this test returns a false positive result 5% of the time in un-infected individuals, there is a chance my friend is simply in the false positive group, however this is terribly unlikely. 
+I would tell my friend that there is a very good chance that they are infected with the MMV virus, however we cannot know that with a 100% certainty. Since this test returns a false positive result 5% of the time in un-infected individuals, there is a chance my friend is simply in the false positive group, however this is terribly unlikely.
+
+## BMB: their probability of being infected is higher than if they *hadn't* gotten a positive test, but there is not a "very good chance" that they are infected.
+
+  
 
 
