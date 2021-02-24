@@ -69,3 +69,13 @@ skewdat <- read.csv("skewdat.csv")
 )
 
 summary(lm(skew~Size,data=skewdat))
+
+
+simfun_rsamp2 <- function(respvar="skew",data=skewdat) {
+  permdat <- data
+  permdat[[respvar]] <- sample(permdat[[respvar]])
+  permdat
+}
+sumfun_skew <- function(dat) {
+  coef(lm(skew~Size,data=dat))["Size"]
+}
