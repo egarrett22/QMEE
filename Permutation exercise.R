@@ -31,6 +31,9 @@ for (i in 1:9999) {
   res[i]<-fieldmean-forestmean ##saves the result 
 }
 
+res[1]
+res[2]
+
 print(hist(res))
 
 truefieldmean <- mean(ants[ants$place=="field","colonies"])

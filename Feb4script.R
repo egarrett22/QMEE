@@ -68,6 +68,3 @@ ggplot(ff, aes(x=environment, y=Change, fill = breathtype)) +
     ## geom_point(aes(colour=breathtype),position=position_dodge(width=0.75)) +
     xlab("Condition") +
     ylab("% Change")
-
-
-
