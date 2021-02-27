@@ -40,6 +40,7 @@ mean(allvals>=obs.mean.diff)
 
 ##two tailed test the way multiplying by 2 way
 2*mean(allvals>=obs.mean.diff)
+##count both tails
 mean(abs(allvals)>=abs(obs.mean.diff))
 
 
