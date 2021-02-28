@@ -2,7 +2,13 @@ Feb4<-read.csv("Feb4data.csv")
 Feb4$Condition<-factor(Feb4$Condition)
 print(Feb4)
 
+library("ggplot2"); theme_set(theme_bw())
+library("lmPerm")
+library("coin")
+library("gtools")
+library("rcompanion")
 
+##Statistical test 1
 ##One way ANOVA of the 6 test conditions. I tried to set up a permutation test for this, but could not figure out how to properly set up the loop for all 6 conditions then run all the anovas for the perrmutation sets 
 one.way <- aov(Feb4$Change ~ Feb4$Condition, data = Feb4)
 summary(one.way)
@@ -10,6 +16,14 @@ summary(one.way)
 anova.comp<- pairwise.t.test(Feb4$Change, Feb4$Condition, p.adj= NULL)
 print(anova.comp)
 
+##permutation test(partial)
+anova.perm.test<-independence_test(Feb4$Change ~ Feb4$Condition,
+                  data = Feb4 )
+print(anova.perm.test)
+##after this point im not sure how to go about comparing the observed value ANOVA results with the permutation ANOVA results 
+
+
+##Statistical test 2
 ##difference in means of the observed values  
 mean(Feb4$Change[Feb4$Condition=="1"])
 mean(Feb4$Change[Feb4$Condition=="2"])
@@ -17,11 +31,6 @@ obs.mean.diff<-(mean(Feb4$Change[Feb4$Condition=="1"])-
                      mean(Feb4$Change[Feb4$Condition=="2"]))
 print(obs.mean.diff)
 
-
-library("ggplot2"); theme_set(theme_bw())
-library("lmPerm")
-library("coin")
-library("gtools")
 
 ##permutation test (difference in means)
 set.seed(101)
