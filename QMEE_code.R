@@ -17,6 +17,8 @@ means=Trial_data_QMEE_assignment_Jan_22%>%
   dplyr::summarise(Mean=mean(A750))
 print(means)
 
+
+
 ##just me playing around trying to get familiar with the name function and pulling out variables from a dataframe. Sorry if its messy, i can do this in another file it it muddles things up too much
 
 ## BMB: you never assigned to a variable "Jan22data", so this code

@@ -53,3 +53,11 @@ mean(all.mean.diff>=obs.mean.diff)
 2*mean(all.mean.diff>=obs.mean.diff)
 ##count both tails
 mean(abs(all.mean.diff)>=abs(obs.mean.diff))
+
+
+
+##Diagnostic plots assignment March 4th 2021
+diagplot1 <- lm(Feb4$Change~Feb4$Condition, data=Feb4)
+par(mfrow=c(2,2),mar=c(2,3,1.5,1),mgp=c(2,1,0))
+plot(diagplot1,id.n=4)
+print(diagplot1)

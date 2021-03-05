@@ -77,3 +77,14 @@ Hypothesis 1:  We hypothesize that there will be multiple conditions where the %
 For hypothesis 2 I will just consider the "normal breathing (1)" and "apnea in cold water (2)" conditions for 
 Hypothesis 2: We hypothesize that the apnea in cold water condition will elicit the dive response but all other conditions will not. This will be measured as a change in % heart rate. The dive response is expected to decreases heart rate when compared to normal breathing control conditions.Therefore, mean heart rate % change should be lower in the apnea condition when compared to the normal breathing condition. Following what we learned this week, we would seek to find if we can clearly see the sign of the % change in heart rate of the apnea in cold water condition.We would expect the sign of the change to be negative.
   How to evaluate this: we could look at the difference in mean between the collected values from the study and the randomly generated permutation values and see if there is a difference, and if that difference arose due to chance. 
+  
+  
+  
+  
+
+Diagnostic plot assignment
+Checking the concerns about our data: 
+1)Bias/linearity: residuals vs fitted: no nonlinear relationships
+2)Heteroscedasticity: scale-location graph.Are there differences in variance across the data set? Slight heteroscedasticity: slight dip on the right hand side of the plot 
+3)Normality: Normal Q-Q: how do the data compare to a normal distribution: Data are normal
+
