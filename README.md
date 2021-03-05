@@ -92,4 +92,6 @@ Checking the concerns about our data:
 3)Normality: Normal Q-Q: how do the data compare to a normal distribution: Data are normal
 
 
+Inferential plot 
+When we initially did this experiment, the entire point of the experiment was to get a general introduction to multiple comparisons.From the pairs tables (pairs (e1)), I would assume (maybe incorrectly) that to interpret which pairings are significantly different from another you would look at the p.value for that pairing. I know from Thursday we were cautioned against picking through all these pairings and choosing which had a statistically significant P-vlaue and which did not and perhaps mistakenly or implicitly accepting the null hypothesis for the other pairings that did not look to be statistically significantly different based solely on the p-vlaue. In this study, at its core, all we really wanted to confirm, or know is if condition 1 (the cold water apnea condition) was different from all the rest. 
 

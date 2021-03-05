@@ -56,8 +56,22 @@ mean(abs(all.mean.diff)>=abs(obs.mean.diff))
 
 
 
+
+
+
 ##Diagnostic plots assignment March 4th 2021
 diagplot1 <- lm(Feb4$Change~Feb4$Condition, data=Feb4)
 par(mfrow=c(2,2),mar=c(2,3,1.5,1),mgp=c(2,1,0))
 plot(diagplot1,id.n=4)
 print(diagplot1)
+
+
+##Inferential plot
+Feb4$Condition<-factor(Feb4$Condition, levels=c("1","2","3","4","5","6"))
+lmcond<-lm(Feb4$Change~Feb4$Condition, data=Feb4)
+print(lmcond)
+
+library(emmeans)
+e1<-emmeans(lmcond, "Condition")
+pairs(e1)
+plot(e1)
