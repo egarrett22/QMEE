@@ -83,8 +83,13 @@ Hypothesis 2: We hypothesize that the apnea in cold water condition will elicit 
   
 
 Diagnostic plot assignment
+
 Checking the concerns about our data: 
 1)Bias/linearity: residuals vs fitted: no nonlinear relationships
-2)Heteroscedasticity: scale-location graph.Are there differences in variance across the data set? Slight heteroscedasticity: slight dip on the right hand side of the plot 
+
+2)Heteroscedasticity: scale-location graph.Are there differences in variance across the conditions? Slight heteroscedasticity: The first two conditions on the left have more or less the same level of variance, and the two conditions to the right have a slightly different variance level(lower than the first two)
+
 3)Normality: Normal Q-Q: how do the data compare to a normal distribution: Data are normal
+
+
 
