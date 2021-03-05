@@ -53,5 +53,3 @@ mean(all.mean.diff>=obs.mean.diff)
 2*mean(all.mean.diff>=obs.mean.diff)
 ##count both tails
 mean(abs(all.mean.diff)>=abs(obs.mean.diff))
-
-
