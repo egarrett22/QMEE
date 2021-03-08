@@ -71,14 +71,17 @@ JD: This relates to my question. It will be easier once I understand how the lev
 
 Permutation assignment (Feb 26)
 For this assignment I will continue to work off of the dive response data that was used in previous assignments. 
+
 Hypothesis 1:  We hypothesize that there will be multiple conditions where the % change in heart rate will have greater variance than the control condition (normal breathing in air(1))
   How would you evaluate this with permutation tests: To  compare all 6 conditions of this study, I would use a one way-ANOVA. I could use the permutation test here by running the ANOVA on the collected data, then one scrambled, randomized permutation data and compare the two P values. Now, an ANOVA does make assumptions about the data; that its normally distributed and that the variation within each group in similar in every group. So maybe an ANOVA is not the best statistical test if we are trying to distance ourselves from making assumptions about the data that was collected. 
+
+JD: You are absolutely free to use the ANOVA _statistic_ to compare the observed to permuted data. That will provide a valid P value with no distributional assumptions.
 
 For hypothesis 2 I will just consider the "normal breathing (1)" and "apnea in cold water (2)" conditions for 
 Hypothesis 2: We hypothesize that the apnea in cold water condition will elicit the dive response but all other conditions will not. This will be measured as a change in % heart rate. The dive response is expected to decreases heart rate when compared to normal breathing control conditions.Therefore, mean heart rate % change should be lower in the apnea condition when compared to the normal breathing condition. Following what we learned this week, we would seek to find if we can clearly see the sign of the % change in heart rate of the apnea in cold water condition.We would expect the sign of the change to be negative.
   How to evaluate this: we could look at the difference in mean between the collected values from the study and the randomly generated permutation values and see if there is a difference, and if that difference arose due to chance. 
   
-  
+JD: Sensible, but not quite a sharp explanation
   
   
   

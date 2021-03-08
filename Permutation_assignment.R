@@ -6,15 +6,20 @@ library("ggplot2"); theme_set(theme_bw())
 library("lmPerm")
 library("coin")
 library("gtools")
-library("rcompanion")
+
+## JD: Don't ask for things you don't need (especially unusual things we might not have)
+## library("rcompanion")
 
 ##Statistical test 1
 ##One way ANOVA of the 6 test conditions. I tried to set up a permutation test for this, but could not figure out how to properly set up the loop for all 6 conditions then run all the anovas for the perrmutation sets 
+## JD: It's nothing like that: you can just permute the labels and redo the base anova.
 one.way <- aov(Feb4$Change ~ Feb4$Condition, data = Feb4)
 summary(one.way)
 
 anova.comp<- pairwise.t.test(Feb4$Change, Feb4$Condition, p.adj= NULL)
 print(anova.comp)
+
+## JD: NOt sure what anova.comp has to do with this exercise
 
 ##permutation test(partial)
 anova.perm.test<-independence_test(Feb4$Change ~ Feb4$Condition,
@@ -45,19 +50,16 @@ for (i in 1:nsim) {
 }
 
 
+## YOu should really avoid coding the same information twice, as you do with 9999 and 10000. Just leave out the sum() would be my suggestion. 
 all.mean.diff<- c(res, obs.mean.diff)
 sum(all.mean.diff>=obs.mean.diff)/10000
 mean(all.mean.diff>=obs.mean.diff)
 
+## JD: You should make sure that you are doubling the smaller tail
 ##two tailed test the way multiplying by 2 way
 2*mean(all.mean.diff>=obs.mean.diff)
 ##count both tails
 mean(abs(all.mean.diff)>=abs(obs.mean.diff))
-
-
-
-
-
 
 ##Diagnostic plots assignment March 4th 2021
 diagplot1 <- lm(Feb4$Change~Feb4$Condition, data=Feb4)
@@ -75,3 +77,5 @@ library(emmeans)
 e1<-emmeans(lmcond, "Condition")
 pairs(e1)
 plot(e1)
+
+## Grade 2.0/3
