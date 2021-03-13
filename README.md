@@ -99,3 +99,25 @@ Checking the concerns about our data:
 Inferential plot 
 When we initially did this experiment, the entire point of the experiment was to get a general introduction to multiple comparisons.From the pairs tables (pairs (e1)), I would assume (maybe incorrectly) that to interpret which pairings are significantly different from another you would look at the p.value for that pairing. I know from Thursday we were cautioned against picking through all these pairings and choosing which had a statistically significant P-vlaue and which did not, and perhaps mistakenly or implicitly accepting the null hypothesis for the other pairings that did not look to be statistically significantly different based solely on the p-value. In this study, the pairing we were most interested in was the condition 1 (control) vs condition 2(cold water apnea). Based solely on the P-value presented in the emmeans pairs comparison, this pairing is significantly different. You could then follow this up with a t-test of condition 1 and 2 to further test for difference between the two conditions.
 
+
+
+
+## assignment 7: generalized linear models 
+Data used: For this assignment I used a "new" data set I have not used before.This data set is from an animal behaviour class where we looked at duck activity at dawn, over time (2 week). Active ducks at dawn were defined by either flying/swimming/walking around within a certain marked perimeter (the visible perimeter of the pond we were looking at). This study was conducted close to when you would expect ducks to begin their migration down south. We took duck activity (a crude and relative measure of the number of ducks present in the environment) and wanted to see if we could measure duck activity decreasing as the ducks began their migration. One, among many, issues with this study is that it was not conducted over a long enough period of time, nor was it properly positioned around duck migration (i think we were a week too early). Duck activity at dawmn may also not have been the best measure, but thats what the lab protocol was at the time. 
+
+Hypothesis: will duck activity decrease at dawn as ducks begin their normal migratory journeys to warmer climates?
+What did we expect? we expected that at some point duck activity, and       therefore ducks present in the pond would plummet, and remain near zero as they all flew down south. this is not what we saw unfortunately, duck levels stayed, relatively constant, with potentially a slight downward trend in numbers over time. 
+
+inferential ggplot (duck2):
+comparing the glm to the collected values: unfortunately not all of the collected data fall in or near the model and the confidence intervals. this suggests that the data may be overdispersed and we will need to account for variable data, we will have to check the (residual deviance/residual df) to see if it is overdispersed (it is). This data doesnt visually look like a quadratic or polynomial fit would help to explain the trends in the data. Overall, the model has a slight negative trend in active duck count over time. 
+This is cout data, so we would choose a poisson distribution. i believe the first time i ran the plots as a poission, the summary information said the data was overdispersed, so i switch to the quasi-poisson model. 
+
+what do we conclude from the diagnostic plots: 
+the residual vs fitted plot shows us that for the most part, the data are linear except for at both extremes of the x axis. fitting a quadratic model may help with this, but probably not, the slight pattern here is probably fine. 
+the quasipoisson logged model/data seem normal (normal Q-Q), so there is no problem there. The model may be slightly heteroscedastic as there is a noticeable pattern in the scale-location diagnostic plot, again here, perhaps using the above mentioned quadratic model may help minimize any patterns there.
+what does all of this tell us? duck activity at dawn over the two week time course did not change. 
+
+
+
+
+
