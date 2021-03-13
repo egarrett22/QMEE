@@ -1,5 +1,5 @@
 ducks<-read.csv("Ducks at dawn.csv")
-print(ducks)
+
 library(ggplot2)
 
 ##inferential plots
