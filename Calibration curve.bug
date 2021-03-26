@@ -1,0 +1,9 @@
+model {
+	for (i in 1:N){
+		Protein[i] ~ dnorm(pred[i], tau)
+		pred[i] <- ma*A590/450[i] + int
+	}
+	ma ~ dnorm(0, .0001)
+	int ~ dnorm(0, .0001)
+	tau ~ dgamma(.001, .001)
+}
