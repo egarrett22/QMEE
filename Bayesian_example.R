@@ -6,6 +6,7 @@ b <- runif(N)
 c <- runif(N)
 y <- rnorm(N,mean=2+1*a+4*b+1*c,sd=1)
 dat <- data.frame(y,a,b,c)
+print(dat)
 
 library("R2jags")
 
