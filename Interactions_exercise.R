@@ -44,7 +44,7 @@ car::Anova(lmboth)
 print(summary(lmint))
 
 
-install.packages("emmeans")
+
 
 library(emmeans)
 e1 <- emmeans(lmboth, "time")
