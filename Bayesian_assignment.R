@@ -7,7 +7,8 @@ Bradford <- jags(data=list(y=ModBrad$AbsRatio, a=ModBrad$Protein),
          inits=NULL,
          n.iter=200000, 
          n.thin=1,
-         parameters=c("ma", "tau"), 
+         n.chains = 2, 
+         parameters=c("ma", "int"), 
          model.file="Calibration curve.bug")
 plot(Bradford)
 
