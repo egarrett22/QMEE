@@ -3,6 +3,8 @@
 ModBrad<-read.csv("Modified_Bradford_Calibration.csv")
 library(R2jags)
 
+## BMB: could leave variable names meaningful (i.e. use
+## Protein, AbsRatio as the variable names in the Bayes calc)
 Bradford <- jags(data=list(y=ModBrad$AbsRatio, a=ModBrad$Protein),  
          inits=NULL,
          n.iter=200000, 
@@ -12,7 +14,7 @@ Bradford <- jags(data=list(y=ModBrad$AbsRatio, a=ModBrad$Protein),
          model.file="Calibration curve.bug")
 ##but not very useful for knowing if this is a good model or not 
 plot(Bradford)
-
+## BMB: not sure why we have that big excursion right at the beginning?
 
 library("emdbook")
 Bradford2<- as.mcmc.bugs(Bradford$BUGSoutput)
@@ -32,3 +34,6 @@ LmBradfordplot<-(ggplot(ModBrad, aes(Protein,AbsRatio))
 plot(LmBradord)
 print(LmBradfordplot)
 
+## BMB: this is fine. Not much advantage in the Bayesian approach
+## here (straightforward model, plenty of data, no prior info)
+## grade: 2/3

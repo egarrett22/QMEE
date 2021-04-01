@@ -1,4 +1,6 @@
 model {
+# BMB: better to pass 42 as a variable (e.g., N)
+## rather than hard-coding it here ...
 	for (i in 1:42){
 	  y[i] ~ dnorm(pred[i], tau)
 		pred[i] <- ma*a[i] + int
