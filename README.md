@@ -112,10 +112,16 @@ inferential ggplot (duck2):
 comparing the glm to the collected values: unfortunately not all of the collected data fall in or near the model and the confidence intervals. this suggests that the data may be overdispersed and we will need to account for variable data, we will have to check the (residual deviance/residual df) to see if it is overdispersed (it is). This data doesnt visually look like a quadratic or polynomial fit would help to explain the trends in the data. Overall, the model has a slight negative trend in active duck count over time. 
 This is cout data, so we would choose a poisson distribution. i believe the first time i ran the plots as a poission, the summary information said the data was overdispersed, so i switch to the quasi-poisson model. 
 
+## JD: Better to explain model choice first and then discuss results. DATA don't have to fall in or near confidence intervals. The CIs for the average height of a Canadian woman are _very_ narrow (because many thousands of measurements); most of the points don't fall inside.
+
 what do we conclude from the diagnostic plots: 
 the residual vs fitted plot shows us that for the most part, the data are linear except for at both extremes of the x axis. fitting a quadratic model may help with this, but probably not, the slight pattern here is probably fine. 
 the quasipoisson logged model/data seem normal (normal Q-Q), so there is no problem there. The model may be slightly heteroscedastic as there is a noticeable pattern in the scale-location diagnostic plot, again here, perhaps using the above mentioned quadratic model may help minimize any patterns there.
 what does all of this tell us? duck activity at dawn over the two week time course did not change. 
+
+JD: Um, everything is changing, all the time. Possibly you're trying to say tha the direction of the change wasn't clear? Or that you're confident that the change was small? Did you do any coefficient plots, or look at summary tables? Not sure where you're getting that.
+
+Grade: 1.6/3
 
 ##assignment 8: Bayesian statistics 
 The data: these data were collected to created a calibration curve with which we could measure protein concentration. The methods: use a blue dye that binds to protein, the more protein there is, the more the protein solution turns blue.We do this with a set of protien standards, We read the absorbance values of these standards and generate a calibration curve. then we take our protein solution that we dont know the concentration of, dye it, take the absorbance reading, and use the regression equation of the calibration curve to figure out what the protein concentration of the unknown sample was. 
